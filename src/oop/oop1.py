@@ -21,6 +21,7 @@
 
 class Vehicle:
         pass
+        #  Parent Class
 
 class GroundVehicle(Vehicle):
         pass
@@ -36,6 +37,7 @@ class Motorcycle(GroundVehicle):
 
 class FlightVehicle(Vehicle):
         pass
+        #  inherits from Vehicle
 
 class Airplane(FlightVehicle):
         pass
@@ -43,3 +45,4 @@ class Airplane(FlightVehicle):
 
 class Starship(FlightVehicle):
         pass
+        #  inherits from FlightVehicle
