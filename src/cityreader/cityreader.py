@@ -10,7 +10,7 @@ class City:
     self.lon = lon
 
   def __str__(self):
-    return f'City: {self.name}, (lat: {self.lat}, lon: {self.lon})'
+    return f'{self.name}, {self.lat}, {self.lon}'
 
 # We have a collection of US cities with population over 750,000 stored in the
 # file "cities.csv". (CSV stands for "comma-separated values".)
@@ -40,10 +40,10 @@ def cityreader(cities=[]):
 
       for row in data:
         count += 1
-        city = City(row[0], row[3], row[4]) # accesses the column(headers) by index in csv file
-        city_list = f'{count}. {city}'
+        city = City(str(row[0]), float(row[3]), float(row[4])) # accesses the column(headers) by index in csv file
+        # city_list = city.name, float(city.lat), float(city.lon)
 
-        cities.append(city_list)
+        cities.append(city)
         #  name of city needs to be a string and lat and lon are floats
         # print(city)
      
